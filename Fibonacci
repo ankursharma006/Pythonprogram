@@ -1,0 +1,23 @@
+terms = int(input("How many terms ?"))
+n1 = 0
+def fibonacci(term):
+    print("Fibonacci sequence upto "+ str(term) +" :")
+    count=0
+    n1=0
+    n2=1
+    while count < term:
+        print(n1)
+        nth = n1 + n2
+        n1 = n2
+        n2 = nth
+        count += 1
+
+if terms<=0:
+    print("Please enter any positive number")
+    newterm=int(input())
+    fibonacci(newterm)
+elif terms==1:
+    print("Fibonacci sequence upto "+ str(terms) +" :")
+    print(n1)
+elif terms > 1:
+    fibonacci(terms)
